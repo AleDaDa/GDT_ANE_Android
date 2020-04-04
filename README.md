@@ -176,8 +176,8 @@ GDT_SDK for flash air android
 		</platform>
 
 
-		I didn't build the android-support-v4.jar, and android-support-v7.jar because some greate guys has done it for us.
-		You can get the basic support from https://github.com/tuarua/Android-ANE-Dependencies/tree/master/anes/support
+	I didn't build the android-support-v4.jar, and android-support-v7.jar because some greate guy has done it for us.
+	You can get the basic support from https://github.com/tuarua/Android-ANE-Dependencies/tree/master/anes/support
 
 	7.8 Create or copy .p12 file in "shell"
 	7.0 build 
