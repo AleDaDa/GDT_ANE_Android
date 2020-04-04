@@ -3,15 +3,15 @@
 GDT_SDK for flash air android
 ( require air sdk32 )
 
-1. 	install Android Studio
-2. 	create a new Andoird project
-	I select a Empty Activity
+1. 	install Android Studio :)
+2. 	create a new Andoird project, select a Empty Activity
 
 3.	(optional) 
 	For net reason, download the latetest gradle file ( ex. gradle-5.6.4-all.zip ) into {project_root}/gradle/wrapper.
 	Edit the "gradle-wrapper.properties" file, change "distributionUrl" value to the local gradle file.
 
 4. Import third libs.
+
 	4.1 Create a directory named "libs" in {project_root}/app/
 	4.2 Copy the third lib ( ex. gtdSDK.acc ) into "libs"
 	4.3 In Android Studio, Create a new Module --> Import a .JAR/.AAR Package , then select the "third lib" from "4.2"
@@ -20,6 +20,7 @@ GDT_SDK for flash air android
 	4.5 Right click the "FlashRuntimeExtensions.jar" File in the AndroidStudio, select "Add As Library"
 
 5. Code Native class.
+
 	5.1 Create "Extension" ( or any names ) implements "FREExtension", which is the native entry.
 
 			import com.adobe.fre.FREExtension;
@@ -82,9 +83,7 @@ GDT_SDK for flash air android
 
 			package com.xxx.ane_swc
 			{
-				import flash.utils.getDefinitionByName;
-				
-				
+				import flash.utils.getDefinitionByName;			
 				public class ANE
 				{
 					private static function create():void
@@ -133,6 +132,7 @@ GDT_SDK for flash air android
 			}
 
 7. Build the ANE File
+
 	7.1 create a new directory named "shell"( or any other names)
 	7.2 Build the swc lib in the FlashBuilder ( in step 6), and get the .swc file, copy into "shell".
 		unzip .swc get the library.swf, copy into "shell"
@@ -174,6 +174,7 @@ GDT_SDK for flash air android
 		</packagedResource>
 		</packagedResources>
 		</platform>
+
 
 		I didn't build the android-support-v4.jar, and android-support-v7.jar because some greate guys has done it for us.
 		You can get the basic support from https://github.com/tuarua/Android-ANE-Dependencies/tree/master/anes/support
