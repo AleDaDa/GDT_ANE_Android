@@ -221,6 +221,9 @@ GDT_SDK for flash air android
 
 
 8. then... import the ane into your flash project.
+	Don't forget , Copy some asset from the third sdk dic into {as_project_root}
+
+
 	and enjoy your debug time.
 
 
