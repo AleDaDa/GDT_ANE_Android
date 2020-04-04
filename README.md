@@ -5,6 +5,37 @@ GDT_SDK for flash air android
 
 1. 	install Android Studio :)
 2. 	create a new Andoird project, select a Empty Activity
+	2.1 change project type to lib ( this part is copy from myflashlabs.com)
+
+		//apply plugin: 'com.android.application'
+		apply plugin: 'com.android.library'
+ 
+			android {
+			    compileSdkVersion 22
+			    buildToolsVersion "22.0.1"
+	 
+		    defaultConfig {
+		        //applicationId "com.doitflash.myFirstANE"
+		        minSdkVersion 10
+		        targetSdkVersion 22
+		        versionCode 1
+		        versionName "1.0"
+		    }
+		    buildTypes {
+		        release {
+		            minifyEnabled false
+		            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+		        }
+		    }
+		}
+ 
+		dependencies {
+		    compile fileTree(dir: 'libs', include: ['*.jar'])
+		    compile 'com.android.support:appcompat-v7:22.1.1'
+		    compile files('libs/FlashRuntimeExtensions.jar')
+		}
+
+	As you see, we have commented out //applicationId “com.doitflash.myFirstANE” and have replaced ‘com.android.application’ to ‘com.android.library’
 
 3.	(optional) 
 	For net reason, download the latetest gradle file ( ex. gradle-5.6.4-all.zip ) into {project_root}/gradle/wrapper.
@@ -18,6 +49,9 @@ GDT_SDK for flash air android
 
 	4.4 Find "FlashRuntimeExtensions.jar" from Flex SDK into "libs"
 	4.5 Right click the "FlashRuntimeExtensions.jar" File in the AndroidStudio, select "Add As Library"
+	4.6 check build.gradle file in android studio : at the bottom 
+
+		compile files('libs/FlashRuntimeExtensions.jar')
 
 5. Code Native class.
 
