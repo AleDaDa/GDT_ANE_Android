@@ -88,7 +88,7 @@ public class ExContext  extends FREContext {
     }
 //=============================================
 
-    public  void createBanner(Activity act, String appId, String bannerId, int sizeType, int posType)
+    public  void createBanner(Activity act, String bannerTag, String bannerId, int sizeType, int posX, int posAnch)
     {
         log("createBanner");
         if(mAdLayout == null) buildLayout(act);
@@ -96,9 +96,9 @@ public class ExContext  extends FREContext {
             mBannersMap = new HashMap<String, GdtBanner>();
         }
         // Add the Banner to the Banners Map
-        mBannersMap.put(bannerId, new GdtBanner(this, act, mAdLayout, bannerId, appId,0,posType,0,0)  );
+        mBannersMap.put(bannerTag, new GdtBanner(this, act, mAdLayout, bannerId, mAppID,0,0,posX,posAnch)  );
         // Create the Banner
-        mBannersMap.get(bannerId).create();
+        mBannersMap.get(bannerTag).create();
     }
     public void showBanner(String bannerId)
     {
@@ -120,7 +120,7 @@ public class ExContext  extends FREContext {
     }
     public void createBannerAbsolute(String bannerId, int sizeType, int px, int py)
     {
-
+//        mBannersMap.put(bannerId, new GdtBanner(this, act, mAdLayout, bannerId, appId,0,1,posX,0)  );
     }
     public void hideBanner(String bannerId)
     {

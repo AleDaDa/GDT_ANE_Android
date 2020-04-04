@@ -90,8 +90,8 @@ public class GdtBanner implements UnifiedBannerADListener {
 	        mAdMobId		= adMobId;
 //	        mAdMobSize		= getAdSize(adSize);
 	        mAdPositionType	= posType;
-	        mAdRelPosition	= mAdAbsPositionX = position1;
-	        mAdAbsPositionY = position2;
+	        mAdAbsPositionX = position1;
+			mAdRelPosition = mAdAbsPositionY = position2;
 	    }
 
 		/**

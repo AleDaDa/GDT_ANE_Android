@@ -16,14 +16,14 @@ public class BannerCreate implements FREFunction {
 			Activity act			= context.getActivity();
 
 			// Set the passed parameter
-			String appId	= args[0].getAsString();
+			String bannerTag	= args[0].getAsString();
 			String bannerId		= args[1].getAsString();
 			int adSize			= args[2].getAsInt();
-			int posType			= args[3].getAsInt();
+			int posX			= args[3].getAsInt();
 			int posAnch			= args[4].getAsInt();
 
 			// Get the Extension context instance
-			cnt.createBanner(act, appId, bannerId, adSize, posType);
+			cnt.createBanner(act, bannerTag, bannerId, adSize, posX, posAnch);
 		} catch (Exception e) {
 			// Print the exception stack trace
 			e.printStackTrace();
