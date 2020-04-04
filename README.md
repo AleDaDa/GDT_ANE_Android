@@ -180,12 +180,13 @@ GDT_SDK for flash air android
 	You can get the basic support from https://github.com/tuarua/Android-ANE-Dependencies/tree/master/anes/support
 
 	7.8 Create or copy .p12 file in "shell"
-	7.0 build 
+
+	7.9 build .ANE
 
 	"{path_to_air_sdk}\AIRSDK\bin\adt" -package -tsa none -storetype PKCS12 -keystore key.p12 -storepass 000000 -target ane myFirst.ane extension.xml -swc *.swc -platform Android-ARM -platformoptions platform.xml library.swf *.jar .\res   
 
 
 8. then... import the ane into your flash project.
-	and, enjoy your debug time.
+	and enjoy your debug time.
 
 
