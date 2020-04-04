@@ -2,6 +2,7 @@ package com.ale1900.myhelloane;
 public class AneFunctions {
 
 	public static final String SET_APPID			= "setAppId";
+	public static final String enableDebug			= "enableDebug";
 	public static final String BANNER_CREATE			= "createBanner";
 	public static final String BANNER_CREATE_ABSOLUTE	= "createBannerAbsolute";
 	public static final String BANNER_SHOW				= "showBanner";

@@ -99,7 +99,7 @@ public class GdtBanner implements UnifiedBannerADListener {
 		 *
 		 */
 		public void create() {
-	    	mContext.log(CLASS+"create adview");
+	    	mContext.log(CLASS+"create adview: "+mAdMobId+", "+mBannerId);
 
 	    	// Create the new adView
 			mAdView = new UnifiedBannerView(mActivity,mAdMobId, mBannerId,this);
@@ -161,7 +161,7 @@ public class GdtBanner implements UnifiedBannerADListener {
 	    	mContext.log(CLASS+"show");
 			// Set the adView visibility
 			if( mAdView!=null ){
-//				mAdView.setVisibility(View.VISIBLE);
+				mAdView.setVisibility(View.VISIBLE);
 				mAdView.setRefresh(40);
 			}
 
@@ -175,7 +175,7 @@ public class GdtBanner implements UnifiedBannerADListener {
 	    	mContext.log(CLASS+"hide, unsurport");
 			// Set the adView visibility
 			if( mAdView != null ){
-//				mAdView.setVisibility(View.GONE);
+				mAdView.setVisibility(View.GONE);
 				mAdView.setRefresh(0);
 			}
 		}

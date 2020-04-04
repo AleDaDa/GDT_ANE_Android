@@ -33,7 +33,7 @@ public class ExContext  extends FREContext {
     {
         Map<String, FREFunction> functions = new HashMap<String, FREFunction>();
         String preFunName = "gdt";
-        functions.put("BannerCreate", new BannerCreate());
+        functions.put(preFunName+AneFunctions.enableDebug, new SetDebug());
         functions.put(preFunName+AneFunctions.SET_APPID,			new InitApp());
         functions.put(preFunName+AneFunctions.BANNER_CREATE,			new BannerCreate());
 //		functions.put(AneFunctions.BANNER_CREATE_ABSOLUTE,	new BannerCreateAbsolute());
@@ -77,7 +77,7 @@ public class ExContext  extends FREContext {
     }
 
     String mAppID;
-    boolean mEnabeDebug = true;
+    boolean mEnabeDebug = false;
     public void setAppId(String id)
     {
         mAppID = id;

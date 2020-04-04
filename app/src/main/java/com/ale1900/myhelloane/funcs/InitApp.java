@@ -11,13 +11,10 @@ public class InitApp implements FREFunction {
 		try {
 			// Get The Extension Context
 			ExContext cnt	= (ExContext) context;
-			
-			// Set the passed parameter
+
 			String appId			= args[0].getAsString();
-			boolean enabeDebug = args[1].getAsBool();
 			// Get the Extension context instance
 			cnt.setAppId(appId);
-			cnt.setEnabeDebug(enabeDebug);
 			return FREObject.newObject(true);
 		} catch (Exception e) {
 			// Print the exception stack trace
