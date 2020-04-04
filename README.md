@@ -3,11 +3,13 @@
 GDT_SDK for flash air android
 ( require air sdk32 )
 
-1. install Android Studio
-2. create a new Andoird project
+1. 	install Android Studio
+2. 	create a new Andoird project
 	I select a Empty Activity
-3.(optional) For net reason, download the latetest gradle file ( ex. gradle-5.6.4-all.zip ) into {project_root}/gradle/wrapper.
-	3.1 Edit the "gradle-wrapper.properties" file, change "distributionUrl" value to the local gradle file.
+
+3.	(optional) 
+	For net reason, download the latetest gradle file ( ex. gradle-5.6.4-all.zip ) into {project_root}/gradle/wrapper.
+	Edit the "gradle-wrapper.properties" file, change "distributionUrl" value to the local gradle file.
 
 4. Import third libs.
 	4.1 Create a directory named "libs" in {project_root}/app/
