@@ -1,12 +1,12 @@
 apply plugin: 'com.android.library'
 android {
-    compileSdkVersion 29
+    compileSdkVersion 28
     buildToolsVersion "29.0.3"
 
     defaultConfig {
 //        applicationId "com.ale1900.myhelloane"
         minSdkVersion 15
-        targetSdkVersion 29
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
 
@@ -37,7 +37,8 @@ dependencies {
 
     compile files('libs/FlashRuntimeExtensions.jar')
 //    implementation (name:'GDTSDK.unionNormal.4.176.1046', ext:'aar')
-    compile (name:'GDTSDK.unionNormal.4.176.1046', ext:'aar')
+//    compile (name:'GDTSDK.unionNormal.4.176.1046', ext:'aar')
+    compile (name:'GDTSDK.tbsNormal.4.176.1046', ext:'aar')
 //    compile(name: 'xxx', ext: 'aar')
     //noinspection GradleCompatible
 //    compile 'com.android.support:support-v4:24+'
