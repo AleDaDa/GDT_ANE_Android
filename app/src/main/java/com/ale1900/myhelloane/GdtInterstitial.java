@@ -55,6 +55,7 @@ public class GdtInterstitial implements UnifiedInterstitialADListener {
         // Create the interstitial.
         mInterstitialAd = new UnifiedInterstitialAD(mActivity, mAppID,mInterstitialId,this);
         isAdLoaded = false;
+        cache();
     }
 
     /**
@@ -152,5 +153,6 @@ public class GdtInterstitial implements UnifiedInterstitialADListener {
     public void onADClosed() {
         isAdLoaded = false;
         mContext.dispatchStatusEventAsync(ExtensionEvents.onInterstitialClosed, mInterstitialId);
+        mContext.removeInterstitial();
     }
 }

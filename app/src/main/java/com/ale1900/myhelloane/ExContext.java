@@ -141,6 +141,8 @@ public class ExContext  extends FREContext {
     public void createInterstitial(Activity act,String interstitialId) {
         log(CLASS+"createInterstitial.."+interstitialId);
         if( mInterstitialAd != null ){
+            log(CLASS+" interstitialAD has inited, auto change to cache");
+            mInterstitialAd.cache();
             return;
         }
         // Create the Banner
@@ -154,6 +156,10 @@ public class ExContext  extends FREContext {
     public void cacheInterstitial() {
         log(CLASS+"cacheInterstitial");
         // Cache the Banner
+        if( mInterstitialAd == null ){
+            log(CLASS+" interstitialAD not inited");
+            return;
+        }
         mInterstitialAd.cache();
     }
 
@@ -196,6 +202,9 @@ public class ExContext  extends FREContext {
     {
         log(CLASS+"createRewardVideo");
         if(mVideo!= null){
+
+            log(CLASS+" video has inited, now changed to cache()");
+            mVideo.cache();
             return;
         }
         mVideo = new GdtVideo(this, act, mAppID, videoID);

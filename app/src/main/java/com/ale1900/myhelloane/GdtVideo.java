@@ -165,12 +165,14 @@ public class GdtVideo implements RewardVideoADListener {
 
     @Override
     public void onADClose() {
+        isAdLoaded = false;
         mContext.dispatchStatusEventAsync(ExtensionEvents.onRewardVideoClose, mVideoId);
+        mContext.removeRewardVideo();
     }
 
     @Override
     public void onError(AdError adError) {
-
+        isAdLoaded = false;
         mContext.dispatchStatusEventAsync(ExtensionEvents.onRewardVideoFailedReceive, adError.getErrorMsg());
     }
 }
