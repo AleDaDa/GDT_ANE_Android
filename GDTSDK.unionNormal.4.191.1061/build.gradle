@@ -1,0 +1,2 @@
+configurations.maybeCreate("default")
+artifacts.add("default", file('GDTSDK.unionNormal.4.191.1061.aar'))

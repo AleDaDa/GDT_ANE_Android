@@ -4,9 +4,11 @@ import android.app.Activity;
 
 import com.qq.e.ads.interstitial2.UnifiedInterstitialAD;
 import com.qq.e.ads.interstitial2.UnifiedInterstitialADListener;
+import com.qq.e.ads.interstitial2.UnifiedInterstitialMediaListener;
+import com.qq.e.comm.constants.AdPatternType;
 import com.qq.e.comm.util.AdError;
 
-public class GdtInterstitial implements UnifiedInterstitialADListener {
+public class GdtInterstitial implements UnifiedInterstitialADListener, UnifiedInterstitialMediaListener {
     private static final String CLASS = "GdtInterstitial - ";
 
 
@@ -55,6 +57,8 @@ public class GdtInterstitial implements UnifiedInterstitialADListener {
         // Create the interstitial.
         mInterstitialAd = new UnifiedInterstitialAD(mActivity, mAppID,mInterstitialId,this);
         isAdLoaded = false;
+        mInterstitialAd.setMediaListener(this);
+        mInterstitialAd.setMaxVideoDuration(30);
         cache();
     }
 
@@ -106,7 +110,7 @@ public class GdtInterstitial implements UnifiedInterstitialADListener {
         mContext.log(CLASS+"show");
         // Show the Interstitial
         if( isAdLoaded == true ){
-            mInterstitialAd.show();
+            mInterstitialAd.showAsPopupWindow();
         }
     }
 
@@ -154,5 +158,50 @@ public class GdtInterstitial implements UnifiedInterstitialADListener {
         isAdLoaded = false;
         mContext.dispatchStatusEventAsync(ExtensionEvents.onInterstitialClosed, mInterstitialId);
         mContext.removeInterstitial();
+    }
+
+    @Override
+    public void onVideoInit() {
+
+    }
+
+    @Override
+    public void onVideoLoading() {
+
+    }
+
+    @Override
+    public void onVideoReady(long l) {
+
+    }
+
+    @Override
+    public void onVideoStart() {
+
+    }
+
+    @Override
+    public void onVideoPause() {
+
+    }
+
+    @Override
+    public void onVideoComplete() {
+
+    }
+
+    @Override
+    public void onVideoError(AdError adError) {
+
+    }
+
+    @Override
+    public void onVideoPageOpen() {
+
+    }
+
+    @Override
+    public void onVideoPageClose() {
+        isAdLoaded = false;
     }
 }

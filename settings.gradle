@@ -1,2 +1,2 @@
 rootProject.name='MyHelloAne'
-include ':app', ':GDTSDK.unionNormal.4.176.1046'
+include ':app', ':GDTSDK.unionNormal.4.176.1046', ':GDTSDK.tbsNormal.4.176.1046', ':GDTSDK.unionNormal.4.191.1061'

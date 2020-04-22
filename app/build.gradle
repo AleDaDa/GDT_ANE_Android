@@ -38,7 +38,7 @@ dependencies {
     compile files('libs/FlashRuntimeExtensions.jar')
 //    implementation (name:'GDTSDK.unionNormal.4.176.1046', ext:'aar')
 //    compile (name:'GDTSDK.unionNormal.4.176.1046', ext:'aar')
-    compile (name:'GDTSDK.tbsNormal.4.176.1046', ext:'aar')
+    compile (name:'GDTSDK.unionNormal.4.191.1061', ext:'aar')
 //    compile(name: 'xxx', ext: 'aar')
     //noinspection GradleCompatible
 //    compile 'com.android.support:support-v4:24+'

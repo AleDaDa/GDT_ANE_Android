@@ -169,6 +169,10 @@ public class ExContext  extends FREContext {
      */
     public void removeInterstitial() {
         log(CLASS+"removeBanner");
+        if( mInterstitialAd == null ){
+            log(CLASS+"removeInterstitial not inited");
+            return;
+        }
         // Remove the Interstitial
         mInterstitialAd.remove();
         mInterstitialAd = null;
@@ -180,6 +184,10 @@ public class ExContext  extends FREContext {
      */
     public Boolean isInterstitialLoaded() {
         log(CLASS+"isInterstitialLoaded");
+        if( mInterstitialAd==null ){
+            log(CLASS+"isInterstitialLoaded not inited");
+            return false;
+        }
         // Check the Interstitial
         return mInterstitialAd.isLoaded();
     }
@@ -190,6 +198,10 @@ public class ExContext  extends FREContext {
      */
     public void showInterstitial() {
         log(CLASS+"showInterstitial");
+        if( mInterstitialAd == null ){
+            log(CLASS+"showInterstitial not inited");
+            return;
+        }
         // Cache the Banner
         mInterstitialAd.show();
     }
