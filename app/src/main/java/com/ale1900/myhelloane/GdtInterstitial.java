@@ -157,7 +157,7 @@ public class GdtInterstitial implements UnifiedInterstitialADListener, UnifiedIn
     public void onADClosed() {
         isAdLoaded = false;
         mContext.dispatchStatusEventAsync(ExtensionEvents.onInterstitialClosed, mInterstitialId);
-        mContext.removeInterstitial();
+//        mContext.removeInterstitial();
     }
 
     @Override
